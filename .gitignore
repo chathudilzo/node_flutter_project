@@ -1,0 +1,8 @@
+# .gitignore (Main project-wide ignore file)
+
+# Ignore Node.js server dependencies
+node/node_modules/
+
+# Ignore Flutter app build artifacts
+daily_class/build/
+daily_class/.dart_tool/
