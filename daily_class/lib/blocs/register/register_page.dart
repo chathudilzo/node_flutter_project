@@ -158,6 +158,16 @@ String _generatePassword(){
                       child: Text('Register'),
                     ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Already have an account?'),
+                    TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LogInPage()));
+                      
+                    }, child: Text('Login'))
+                  ],
                 )
             ],
           ),
