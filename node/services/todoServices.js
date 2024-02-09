@@ -11,6 +11,20 @@ class TodoService{
             throw error;
         }
     }
+
+    static async getTodos(userId){
+        try{
+            const todoData= await ToDoModel.find({userId});
+            return todoData;
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+    static async deleteTask(id){
+        const deleted=await ToDoModel.findOneAndDelete({_id:id});
+        return deleted;
+    }
 }
 
 

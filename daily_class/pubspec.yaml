@@ -39,7 +39,8 @@ dependencies:
   http:
   shared_preferences:
   jwt_decoder:
-  flutter_slidable:  
+  flutter_slidable:
+  get: 
   
    
 

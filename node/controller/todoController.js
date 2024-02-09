@@ -13,3 +13,33 @@ exports.createTodo=async(req,res,next)=>{
         next(error);
     }
 }
+
+
+exports.getAllTodos=async(req,res,next)=>{
+    try{
+        const {userId}=req.body;
+        let todos=await TodoService.getTodos(userId);
+
+        res.json({status:true,success:todos});
+
+    }catch(error){
+        next(error);
+    }
+
+
+};
+
+
+exports.deleteTask=async(req,res,next)=>{
+    try{
+        const {id}=req.body;
+
+        let deleted=await TodoService.deleteTask(id);
+
+        res.json({status:true,success:deleted});
+
+
+    }catch(error){
+        next(error);
+    }
+}
